@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css" />
+        <title>web app libri - firebase- firestore</title>
+    </head>
+    <body>
+        <h1>web app libri - firebase- firestore</h1>
+        <div class="content">
+        <form id="add-aluno-form">
+            <input name="nome" type="text" placeholder="Nome do Aluno">
+            <input name="cpf" type="text" placeholder="CPF">
+            <input name="rg" type="text" placeholder="RG">
+            <input name="telefone_aluno" type="text" placeholder="Telefone do Aluno">
+            <input name="telefone_responsavel" type="text" placeholder="Telefone do Responsável">
+            <input name="email" type="email" placeholder="E-mail">
+            <input name="data_nascimento" type="date" placeholder="Data de Nascimento">
+        <select class="optionsCurso" name="cod_turma" id="cod_turma">
+            <option value="lGS5dvYdlnfwhMpZT7Tc">1DSN</option>
+            <option value="i1O6uHR8PMAF0U5H2mHs">2DSN</option>
+            <option value="M0eDmfixHiJhdL5cwhYe">3DSN</option>
+        </select>
+        
+            <button type="submit">Cadastrar Aluno</button>
+        </form> 
+        <h2>Alunos:</h2>
+        <div class="container">
+            <ul id="aluno-list"></ul>   
+        </div>
+        </div>
+
+    </body>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <script>
+
+        firebase.initializeApp(firebaseConfig);
+        
+          
+        const db = firebase.firestore();
+
+    </script>
+    <script src="/app.js"></script>
+</html>
